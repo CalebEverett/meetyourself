@@ -1,0 +1,17 @@
+<footer class="site-footer">
+	<div class="footer-top">
+		<div class="inner-wide">
+			<div class="offsite-links">
+				{{#if @blog.twitter}}<a href="{{twitter_url}}" class="icon-twitter"><span class="screen-reader-text">Twitter</span></a>{{/if}}
+				{{#if @blog.facebook}}<a href="{{facebook_url}}" class="icon-facebook"><span class="screen-reader-text">Facebook</span></a>{{/if}}
+				<a href="https://www.linkedin.com/nikoeverett" class="icon-linkedin"><span class="screen-reader-text">Linkedin</span></a>
+				<!-- <a href="https://www.youtube.com/user/{{! Add YouTube handle }}" class="icon-youtube"><span class="screen-reader-text">YouTube</span></a> -->
+				<a href="{{@blog.url}}/rss/" class="icon-feed"><span class="screen-reader-text">RSS</span></a>
+			</div><!-- .offsite-links -->
+			<a href="#page" class="top-link square icon-chevron-up" title="Back to Top"><span class="screen-reader-text">Back to the top</span></a>
+		</div><!-- .inner -->
+	</div><!-- .footer-top -->
+	<div class="site-info inner-wide">
+		<p>&copy; <a href="/">{{@blog.title}}</a> all rights reserved.</p>
+	</div><!-- .site-info -->
+</footer><!-- .site-footer -->

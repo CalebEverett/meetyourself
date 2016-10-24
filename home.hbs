@@ -1,0 +1,36 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The main content area on the homepage }}
+<main class="site-main" role="main">
+	<div class="site-content inner-wide">
+
+		<div class="cover hero">
+			{{#if @blog.cover}}
+			<div class="cover-bg" style="background-image: url({{@blog.cover}})"></div>
+			{{/if}}
+			<div class="cover-content">
+				<div class="inner">
+					<div class="hero-wrap">
+						<h2 class="hero-title fade-in">{{@blog.title}}</h2>
+						<p class="hero-text fade-in">{{@blog.description}}</p>
+						<p class="subscribe">
+						{{#if @labs.subscribers}}
+							{{subscribe_form form_class="gh-subscribe-form" placeholder="Your email address"}}
+						{{else}}
+							<a href="{{@blog.url}}/rss/" class="button light fade-in">Subscribe</a>
+						{{/if}}
+					</div>
+				</div><!-- .inner -->
+			</div><!-- .cover-content -->
+		</div><!-- .cover -->
+		<div class="home-welcome">
+			<p>
+			What happens when you find the place in you where you come alive? When you connect with who you were born to be? You will touch into your radiance and your epicness and you will start to live your dreams - uncompromised. I know with my whole heart that when you fully Meet Yourself, this and more is possible!		
+			</p>
+		</div>
+		{{! The tag below includes the post loop - partials/loop.hbs }}
+		{{> "loop"}}
+		
+	</div><!-- .site-content -->
+</main><!-- .site-main -->

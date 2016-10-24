@@ -1,0 +1,42 @@
+<div class="footer-widgets">
+	<div class="inner-wide">
+		<div class="widget-area">
+			<div class="footer-col first">
+				<aside class="widget widget-instagram">
+					<h2 class="widget-title"> A Guide to Self-Esteem</h2>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/uOrzmFUJtrs" frameborder="0" allowfullscreen></iframe>
+				</aside><!-- .widget -->
+			</div>
+			<div class="footer-col middle">
+				<aside class="widget widget-recent-posts">
+					<h2 class="widget-title">Latest Posts</h2>
+					<div class="recent-posts"></div>
+				</aside><!-- .widget -->
+			</div> 
+			<div class="footer-col last">
+				<aside class="widget widget-tags">
+					<h2 class="widget-title">Tags</h2>
+					<div class="tagcloud"></div>
+				</aside><!-- .widget -->
+			</div>
+		</div><!-- .widget-area -->
+	</div><!-- .inner-wide -->
+</div><!-- .footer-widgets -->
+
+<footer class="site-footer">
+	<div class="footer-top">
+		<div class="inner-wide">
+			<div class="offsite-links">
+				{{#if @blog.twitter}}<a href="{{twitter_url}}" class="icon-twitter"><span class="screen-reader-text">Twitter</span></a>{{/if}}
+				{{#if @blog.facebook}}<a href="{{facebook_url}}" class="icon-facebook"><span class="screen-reader-text">Facebook</span></a>{{/if}}
+				<a href="https://www.linkedin.com/nikoeverett" class="icon-linkedin"><span class="screen-reader-text">Linkedin</span></a>
+				<!-- <a href="https://www.youtube.com/user/{{! Add YouTube handle }}" class="icon-youtube"><span class="screen-reader-text">YouTube</span></a> -->
+				<a href="{{@blog.url}}/rss/" class="icon-feed"><span class="screen-reader-text">RSS</span></a>
+			</div><!-- .offsite-links -->
+			<a href="#page" class="top-link square icon-chevron-up" title="Back to Top"><span class="screen-reader-text">Back to the top</span></a>
+		</div><!-- .inner -->
+	</div><!-- .footer-top -->
+	<div class="site-info inner-wide">
+		<p>&copy; <a href="/">{{@blog.title}}</a> all rights reserved.</p>
+	</div><!-- .site-info -->
+</footer><!-- .site-footer -->

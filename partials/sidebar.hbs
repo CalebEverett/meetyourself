@@ -1,0 +1,29 @@
+<div class="sidebar">
+	<div class="sidebar-scrollable">
+		<div class="widget-area">
+			{{#if @blog.navigation}}
+				{{navigation}}
+			{{/if}}
+			<aside class="widget widget-text">
+				<h2 class="widget-title">It's time</h2>
+				<p>I know the story you may be telling yourself all too well. I spent 15 years underestimating myself and I have interviewed hundreds of women and girls, who, no matter their outward success, have a voice telling them they are frauds and they cannot have the life they most want.</p>
+				<p>And I know there is a storm brewing, a fire burning in you. There is a story only you can tell, a contribution only you can make. The world will never be the same until you lead your inspired life. Don't waste another second. Meet Yourself at the place where you feel brave, where your boldness flows from a truth within you and where you are the agent of your life.</p>
+			</aside><!-- .widget -->
+			{{!-- Email subscribe form --}}
+			{{#if @labs.subscribers}}
+			<aside class="widget widget-subscribe">
+				<h2 class="widget-title">{{@blog.title}}</h2>
+				<p>Join me to untame your voice, rewrite your story and unleash your inspired life!</p>
+				{{subscribe_form form_class="gh-subscribe-form" placeholder="Your email address"}}
+			</aside><!-- .widget -->
+			{{/if}}
+			<aside class="widget widget-text">
+				<h2 class="widget-title">Contact</h2>
+				<ul class="contacts">
+					<li><span class="icon icon-envelope" aria-hidden="true"></span><a href="mailto:niko@nikoeverett.com">niko@nikoeverett.com</a></li>
+				</ul>
+			</aside><!-- .widget -->
+		</div><!-- .widget-area -->
+		<a class="sidebar-toggle"><span class="screen-reader-text">Close Sidebar</span><span class="icon" aria-hidden="true"></span></a>
+	</div><!-- .sidebar-scrollable -->
+</div><!-- .sidebar -->
