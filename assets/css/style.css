@@ -17,6 +17,7 @@
  * 9. Widgets
  * 10. Site Footer
  * 11. Media Queries
+ * 12. NE Icons 
 */
 
 /**
@@ -33,6 +34,13 @@
 		url('../fonts/fontawesome.ttf?wjrubt') format('truetype'),
 		url('../fonts/fontawesome.woff?wjrubt') format('woff'),
 		url('../fonts/fontawesome.svg?wjrubt#fontawesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'crystalsky';
+	src:    url('../fonts/crystalskyalt.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -937,7 +945,7 @@ pre .storage {
 }
 
 .site-title img {
-	max-height: 50px;
+	max-height: 100px;
 }
 
 .sidebar-toggle {
@@ -1425,14 +1433,14 @@ pre .storage {
 	color: #fff;
 	display: table;
 	height: 100vh;
-	margin-bottom: 60px;
+/*	margin-bottom: 60px; */
 	position: relative;
 	width: 100%;
 }
 
 .cover.hero {
 	height: 600px;
-	margin-bottom: 30px;
+/*	margin-bottom: 30px; */
 }
 
 .cover.page-header {
@@ -1484,16 +1492,61 @@ pre .storage {
 
 .home-welcome {
 	display: flex;
-	text-align: center;
-	justify-content: center;
-	width: 100%;
+	justify-content: space-around;
+	flex-direction: column;	
+	padding-bottom: 30px;
+	background-color: gainsboro;
+	padding-top: 30px;
+	margin-bottom: 30px;
+}
+@media only screen and (min-width: 840px){
+	.home-welcome {
+		flex-direction: row;
+		width: 100%;
+		padding-bottom: 60px;
+		background-color: gainsboro;
+		padding-top: 60px;
+	}
+}
+.home-welcome div.ne-section h4 {
+	text-align: center;	
+	background-color: indianred;
+	margin: -24px;
+	padding: 16px;
+	font-size: 100%;
+	text-transform: uppercase;
+	color: ivory; 
 }
 
 .home-welcome p {
-	margin: 30px 10px 80px 10px;
-	font-size: 24px;
-	line-height: 200%;
-	max-width: 860px;
+	margin-top: 48px;
+	font-weight: normal;
+}
+
+.home-welcome div.ne-section {
+	flex: 0 1 26%;
+	background-color: white;	
+	padding: 24px;
+	margin: 24px;	
+
+}
+
+.home-welcome div.ne-section.contrast {
+	flex: 0 1 26%;
+	background-color: white;	
+	padding: 24px;
+
+}
+
+.home-welcome div.ne-section.contrast h4 {
+	text-align: center;	
+	background-color: coral;
+	margin: -24px;
+	padding: 16px;
+	font-size: 100%;
+	text-transform: uppercase;
+	color: ivory;
+
 }
 
 .hero .cover-content {
@@ -1524,7 +1577,6 @@ pre .storage {
 }
 
 .hero-wrap {
-	border-left: 7px solid aqua;
 	padding-left: 45px;
 }
 
@@ -1537,9 +1589,10 @@ pre .storage {
 	animation-fill-mode:         both;
 	-webkit-animation-name: fadeInDown;
 	animation-name:         fadeInDown;
-	color: #fff;
-	font-size: 48px;
-	text-transform: uppercase;
+	font-family: 'crystalsky', Garamond, serif;
+	color: aqua;
+	font-size: 86px;
+	font-weight: normal;	
 }
 
 .hero-text {
@@ -1551,8 +1604,10 @@ pre .storage {
 	animation-fill-mode:         both;
 	-webkit-animation-name: fadeInDown;
 	animation-name:         fadeInDown;
+	font-family: 'Montserrat', sans-serif;	
+	font-weight: bold;	
 	font-size: 18px;
-	font-style: italic;
+	text-transform: uppercase;
 }
 
 .hero .subscribe {
@@ -2131,7 +2186,7 @@ pre .storage {
 	}
 
 	.hero-title {
-		font-size: 60px;
+		font-size: 100px;
 	}
 
 	.hero-text {
@@ -2272,7 +2327,7 @@ pre .storage {
 	}
 
 	.hero-title {
-		font-size: 40px;
+		font-size: 72px;
 		margin-bottom: 15px;
 	}
 
@@ -2345,7 +2400,7 @@ pre .storage {
 	.page-title,
 	.post-template .post-title,
 	.hero-title {
-		font-size: 34px;
+		font-size: 40px;
 	}
 
 	h2 {
@@ -2434,7 +2489,7 @@ pre .storage {
 	.page-title,
 	.post-template .post-title,
 	.hero-title {
-		font-size: 30px;
+		font-size: 48px;
 	}
 
 	h2,
@@ -2538,4 +2593,17 @@ pre .storage {
 		position: static;
 		width: 140px;
 	}
+}
+
+use {
+width: 100%;
+height: 100%;
+}
+
+.ne-icon {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  overflow: hidden;
 }
